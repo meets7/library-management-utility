@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://use.fontawesome.com/6f32af3517.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/books.js"></script>
+  <title>Book: <%= @book.title -%></title>
+</head>
+
+<body id="checkout">
+  <h1 id="book-title">
+    Checkout
+  </h1>
+  <!-- <%= debug @books %> -->
+
+  <div class="checkout">
+
+    <input type="checkbox" id="payment">
+    <label for="payment">
+      <div class="tab payment">
+        <h3 class="tab__title">Review<span class="fa fa-check"></span></h3>
+        <div class="tab__content">
+          <span id="cover-image"><%= image_tag(@book.cover) -%></span>
+          <span class="review-details"><%= @book.title -%></span>
+
+        </div>
+      </div>
+    </label>
+
+
+    <input type="checkbox" id="cc" checked>
+    <label for="cc">
+      <div class="tab cc">
+        <h3 class="tab__title"></span>Borrower Id<span class="fa fa-check"></span></h3>
+        <div class="tab__content">
+          <div class="input-group">
+            <%= form_tag({:controller=>"book_loans", :action=>"new"}, method: :get) do %>
+            <%= text_field_tag :borrower_id, nil,{:placeholder => "Borrower card number", :id=>"borrower-id"} %>
+            <span type="button" id="OR-text" class="button--circle">Or</button>
+              <%= text_field_tag :borrower_phone, nil, {:placeholder => "Borrower phone number", :id => "borrower-phone"} %>
+              <!-- <input type="text" id="borrower-id" class="" placeholder="Borrower Card Number" /> -->
+              <!-- <input type="text" id="borrower-phone" class="" placeholder="Borrower Phone Number"> -->
+              <button type="button" class="button--action button--circle">GO</button>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <input type="checkbox" id="agreement">
+      <label for="agreement">
+        <div class="tab agreement">
+          <h3 class="tab__title">Due Date<span class="fa fa-check"></h3>
+          <div class="tab__content">
+            <div class="agreement__text">
+              <p>The due date for this book loan is 2 weeks from now. For every day past the due date, a fine of $0.25 would be levied on the borrowers account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <input type="checkbox" id="confirmation">
+      <label for="confirmation">
+        <div class="tab confirmation">
+          <h3 class="tab__title">Confirmation<span class="fa fa-check"></h3>
+          <div class="tab__content">
+            <p>Confirm book loan?</p>
+            <%= hidden_field_tag(:isbn, @book.isbn) %>
+            <%= submit_tag 'Yes', {:class=>"transparent fa fa-times" } %>
+            <% end %>
+            <button type="button" class="transparent"><span class="fa fa-times"></span>No</button>
+          </div>
+        </label>
+      </div>
+
+
+    </body>
+
+    </html>

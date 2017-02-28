@@ -1,0 +1,365 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+/* line 3, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+html {
+  background: #000 url(http://i.imgur.com/4Vs44ZW.jpg) no-repeat fixed center center;
+  background-size: cover;
+}
+
+/* line 8, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* line 15, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.container {
+  width: calc(3*170px);
+  height: calc(1*170px);
+  margin: 100px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* line 22, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.tile {
+  width: 170px;
+  height: 170px;
+  text-align: center;
+  float: left;
+}
+
+/* line 29, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.tile {
+  outline: 7px solid rgba(255, 255, 255, 0);
+  transition: outline .5s;
+  position: relative;
+  /* outline */
+}
+
+/* line 35, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.tile:hover {
+  outline-color: rgba(255, 255, 255, 0.4);
+  transition: outline .5s;
+  z-index: 3000 !important;
+  /* outline */
+}
+
+/* line 41, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.tile > a {
+  width: inherit;
+  height: inherit;
+  display: block;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+/* line 49, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.blue {
+  background-color: #00c0e4;
+}
+
+/* line 50, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.mint {
+  background-color: #2ecc71;
+}
+
+/* line 51, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.purple {
+  background-color: #7658f8;
+}
+
+/* line 53, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.yellow {
+  background-color: #eac14d;
+}
+
+/* line 54, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.red {
+  background-color: #e6567a;
+}
+
+/* line 55, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.pink {
+  background-color: #cb70d7;
+}
+
+/* line 57, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+img.icon {
+  width: 70px;
+  height: 70px;
+  margin: 28px 0 14px;
+}
+
+/* line 63, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.title {
+  display: block;
+}
+
+/* line 67, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 76, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+form .fa-search {
+  width: 70px;
+  height: 70px;
+  margin: 28px 0 14px;
+  font-size: 75px;
+}
+
+/* line 84, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/search.scss */
+.search:focus {
+  width: 100%;
+  font-size: 50px;
+  font-color: red;
+}
+/* config.css */
+/* helpers/align.css */
+/* line 10, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.align {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: url(background-books.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+/* helpers/grid.css */
+/* line 32, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+  max-width: 20rem;
+  width: 90%;
+}
+
+/* helpers/hidden.css */
+/* line 42, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* helpers/icon.css */
+/* line 55, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.icons {
+  display: none;
+}
+
+/* line 59, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.icon {
+  display: inline-block;
+  fill: #606468;
+  font-size: 16px;
+  font-size: 1rem;
+  height: 1em;
+  vertical-align: middle;
+  width: 1em;
+}
+
+/* layout/base.css */
+/* line 71, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+* {
+  box-sizing: inherit;
+}
+
+/* line 75, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+
+/* line 81, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+body {
+  /*background-color: #2c3338;*/
+  background-image: '/images/background-books.jpg';
+  /*color: #606468;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100%;
+}
+
+/* modules/anchor.css */
+/* line 98, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+a {
+  color: #eee;
+  outline: 0;
+  text-decoration: none;
+}
+
+/* line 104, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+/* modules/form.css */
+/* line 111, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+h1 {
+  color: white;
+  text-align: center;
+  font: inherit;
+  font-size: 5em;
+  font-family: 'Caveat Brush', cursive;
+}
+
+/* line 118, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+button {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+/* line 131, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+button {
+  cursor: pointer;
+}
+
+/* line 135, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.form {
+  margin: -14px;
+  margin: -0.875rem;
+}
+
+/* line 140, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+button {
+  width: 100%;
+}
+
+/* line 144, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 14px;
+  margin: 0.875rem;
+}
+
+/* line 152, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.form__input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* modules/login.css */
+/* line 160, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.login {
+  color: #eee;
+}
+
+/* line 164, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+button {
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+}
+
+/* line 170, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.login label {
+  background-color: #363b41;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+}
+
+/* line 180, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.login input[type='password'],
+.login input[type='text'] {
+  background-color: #3b4148;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 187, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.login input[type='password']:focus,
+.login input[type='password']:hover,
+.login input[type='text']:focus,
+.login input[type='text']:hover {
+  background-color: #434a52;
+}
+
+/* line 194, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+button {
+  background-color: #294c99;
+  color: #eee;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 201, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+button:focus,
+button:hover {
+  background-color: #646089;
+}
+
+/* modules/text.css */
+/* line 208, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+p {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+/* line 215, /mnt/d2ac0f45-d1ab-46ab-94ab-fd6a86c63151/meet/developement/study/db/project1/libman/rails-app/app/assets/stylesheets/welcome.scss */
+.text--center {
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

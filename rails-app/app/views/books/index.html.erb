@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://use.fontawesome.com/6f32af3517.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" /> -->
+  <title>Library Management System</title>
+</head>
+
+<body class="align" id="books-index">
+  <h1 id="search-term">
+    You searched for : <%= @search_text %>
+  </h1>
+  <!-- <%= debug @books %> -->
+  <div class="viewport">
+  <% @books.each do |book| -%>
+  <div class="flip-card">
+    <div class="card-front">
+      <%= image_tag(book.cover) -%>
+    </div>
+    <div class="card-back">
+      <span> <%= book.isbn -%> </span>
+      <span> <%= book.title -%> </span>
+      <span> <%= book.authorName -%> </span>
+      <span> Available: <%= book.availability -%> </span>
+
+      <span><%= link_to "Borrow", book_path(:id => book.isbn) %></span>
+      
+    </div>
+  </div>
+  <% end -%>
+  </div>
+
+</body>
+
+</html>

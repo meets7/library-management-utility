@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://use.fontawesome.com/6f32af3517.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/books.js"></script>
+  <title>Book: <%= @book.title -%> checkedout</title>
+</head>
+
+<body id="checkout">
+  <h1 id="book-title">
+    Checkout complete for the following book
+  </h1>
+  <!-- <%= debug @books %> -->
+
+  <div class="checkout">
+
+    <input type="checkbox" id="payment">
+    <label for="payment">
+      <div class="tab payment">
+        <h3 class="tab__title">Complete<span class="fa fa-check"></span></h3>
+        <div class="tab__content">
+          <span id="cover-image"><%= image_tag(@book.cover) -%></span>
+          <span class="review-details"><%= @book.title -%></span>
+        </div>
+      </div>
+    </label>
+
+    <a href="/welcome/search"><button>Continue</button></a>
+
+    </body>
+
+    </html>

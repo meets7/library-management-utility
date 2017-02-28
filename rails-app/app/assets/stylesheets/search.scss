@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+html {
+	background: #000 url(http://i.imgur.com/4Vs44ZW.jpg) no-repeat fixed center center;
+	background-size: cover;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+	font-size: 16px;
+	box-sizing:border-box;
+}
+
+.container {
+	width: calc(3*170px);
+	height: calc(1*170px);
+	margin: 100px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+
+.tile {
+	width: 170px;
+	height: 170px;
+	text-align: center;
+	float: left;
+}
+
+.tile {
+	outline: 7px solid rgba(255,255,255,0);
+	transition: outline .5s;
+    position: relative; /* outline */
+}
+
+.tile:hover {
+	outline-color: rgba(255,255,255,.4);
+	transition: outline .5s;
+    z-index: 3000 !important; /* outline */
+}
+
+.tile > a {
+	width: inherit;
+	height: inherit;
+	display: block;
+	color: #fff;
+	text-decoration: none !important;
+}
+
+.blue { background-color: #00c0e4; }
+.mint { background-color: #2ecc71; }
+.purple { background-color: #7658f8; }
+
+.yellow { background-color: #eac14d; }
+.red { background-color: #e6567a; }
+.pink { background-color: #cb70d7; }
+
+img.icon {
+	width: 70px;
+	height: 70px;
+	margin: 28px 0 14px;
+}
+
+.title {
+	display: block;
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.tile .icon{
+	width: 70px;
+	height: 70px;
+	margin: 28px 0 14px;
+	font-size:75px;	
+}
+
+
+.search{
+	display:none;
+	width:100%;
+	height:170px;
+	font-size:50px;
+	text-align:left;
+}
+
+.search::-webkit-input-placeholder{
+	color:grey;
+	padding-left:10px;
+}
+
+
+
+
+
+
