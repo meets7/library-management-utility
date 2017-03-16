@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+  <script src="https://use.fontawesome.com/6f32af3517.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>Fines</title>
+</head>
+
+<body class="align">
+  <div class="container" id="book-loans-table">
+
+    <h3 id="return-book-title">
+      Fines
+    </h3>
+
+    <h3 id="alert"><%= flash[:error] %></h3>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Card Id</th>
+        <th>Fine Amount</th>
+        
+        <th>Select</th>
+
+      </tr>
+
+      <% @fines.each do |fine| %>
+      <tr>
+        <td><%= fine.bname %></td>
+        <td><%= fine.card_id %></td>
+        <td><%= fine.amount %></td>
+        <td><%= link_to 'Mark as paid', edit_fine_path(id:"userFines",borrower_id: fine.card_id) %></td>
+      </tr>
+      <%end%>
+    </table>
+
+    <div class="continue-button">
+      <%= link_to "Continue", welcome_search_path %>
+      </div>
+  </div>
+
+
+</body>
+
+</html>

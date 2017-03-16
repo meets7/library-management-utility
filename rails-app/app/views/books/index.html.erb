@@ -16,22 +16,23 @@
   </h1>
   <!-- <%= debug @books %> -->
   <div class="viewport">
-  <% @books.each do |book| -%>
-  <div class="flip-card">
-    <div class="card-front">
-      <%= image_tag(book.cover) -%>
+    <% @books.each do |book| -%>
+    <div class="flip-card">
+      <div class="card-front">
+        <%= image_tag(book.cover, alt: book.title) -%>
+        <span> <%= book.title -%> </span>
+      </div>
+      <div class="card-back">
+        <span> ISBN: <%= book.isbn -%> </span>
+        <span> Title: <%= book.title -%> </span>
+        <span> Authors: <%= book.authorName -%> </span>
+        <span> Available: <%= book.availability -%> </span>
+        <span id="borrow">
+        <%= link_to_if book.availability, 'Borrow', book_path(:id => book.isbn),{class: "borrow-link"} %>
+        </span>
+      </div>
     </div>
-    <div class="card-back">
-      <span> <%= book.isbn -%> </span>
-      <span> <%= book.title -%> </span>
-      <span> <%= book.authorName -%> </span>
-      <span> Available: <%= book.availability -%> </span>
-
-      <span><%= link_to "Borrow", book_path(:id => book.isbn) %></span>
-      
-    </div>
-  </div>
-  <% end -%>
+    <% end -%>
   </div>
 
 </body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+  <script src="https://use.fontawesome.com/6f32af3517.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>Library Management System</title>
+</head>
+
+<body class="align">
+  <div class="container" id="book-loans-table">
+
+    <h3 id="return-book-title">
+      Return Book
+    </h3>
+    <% if @isEmpty == true %>
+          <div id="borrowerDetails">
+      <span><h4>No book loans found!</h4></span>
+      <div id="continue-button">
+    <%= link_to "Continue", welcome_search_path %>
+  </div>
+    </div>
+    <% else %>
+    <div id="borrowerDetails">
+      <span><h5>Borrower details</h5></span>
+      <span>Borrow Name: <%= @borrowerInfo[0].borrowerName%></span>
+      <span>Borrow card id: <%= @borrowerInfo[0].card_id%></span>
+    </div>
+
+    <table>
+      <tr>
+        <th>Book Title</th>
+        <th>ISBN</th>
+        <th>Checkout Date</th>
+        <th>Due Date</th>
+        <th>Select</th>
+      </tr>
+
+      <% @borrowerInfo.each do |book_loan| %>
+      <tr>
+        <td>sample</td>
+        <td><%= book_loan.isbn %></td>
+        <td><%= book_loan.date_out %></td>
+        <td><%= book_loan.due_date %></td>
+        <td><%= link_to 'Checkin', book_loan_path(book_loan) %><%end%></td>
+      </tr>
+    </table>
+  </div>
+  <% end %>
+<div class="continue-button">
+  <%= link_to "Continue", welcome_search_path %>
+</div>>
+
+</body>
+
+</html>

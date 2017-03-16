@@ -6,33 +6,22 @@
   <script src="https://use.fontawesome.com/6f32af3517.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/books.js"></script>
-  <title>Book: <%= @book.title -%> checkedout</title>
+  <title>Checkout for borrower: <%= @book_loan.card_id -%></title>
 </head>
 
 <body id="checkout">
 
   <h3 id="message">
-    <% if @borrowSuccessful == true %>
-    Checkout complete for the following book
-    <% else %>
-    Checkout failed. Borrower has already 3 books loaned out.
-    <% end %>
+    Checkin completed
   </h3>
 
   <div class="checkout">
     <input type="checkbox" id="payment">
     <label for="payment">
       <div class="tab payment">
-        <% if @borrowSuccessful == true %>
         <h3 class="tab__title">Complete<span class="fa fa-check"></span></h3>
-        <% else %>
-        <h3 class="tab__title">Failed<span class="fa fa-times"></span></h3>
-        <% end %>
         <div class="tab__content">
-          <%= image_tag(@book.cover, alt: @book.title) -%>
-          <span> <%= @book.title -%> </span>
-          <span> ISBN: <%= @book.isbn -%> </span>
-          <span> Title: <%= @book.title -%> </span>
+        <span>Checkin Completed!</span>
         </div>
       </div>
     </label>
@@ -40,6 +29,7 @@
 
   <div id="continue-button">
     <%= link_to "Continue", welcome_search_path %>
+    <%= link_to "Back", url_for(:back) %>
     <!-- <a href="/welcome/search"><button>Continue</button></a> -->
   </div>
 </body>

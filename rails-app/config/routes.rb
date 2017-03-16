@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :books, :only => [:index, :show]
   resources :borrowers
   resources :book_loans
+  resources :fines
 
 
   get '/welcome/search', to: 'welcome#search'

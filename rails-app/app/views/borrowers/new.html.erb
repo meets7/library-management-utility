@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+  <script src="https://use.fontawesome.com/6f32af3517.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>Fines</title>
+</head>
+
+<body class="align">
+  <div class="container" id="book-loans-table">
+
+
+    <% if @borrower.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@borrower.errors.count, "error") %> prohibited
+          this borrower from being saved:
+        </h2>
+        <ul>
+          <% @borrower.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= form_for :borrower, url: borrowers_path do |f| %>
+    <p>
+      <%= f.label :Name %><br>
+      <%= f.text_field :bname %>
+    </p>
+
+    <p>
+      <%= f.label :ssn %><br>
+      <%= f.text_area :ssn %>
+    </p>
+
+    <p>
+      <%= f.label :address %><br>
+      <%= f.text_area :address %>
+    </p>
+
+    <p>
+      <%= f.label :phone %><br>
+      <%= f.text_area :phone %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+    <% end %>
+  </div>
+</body>
+</html>
