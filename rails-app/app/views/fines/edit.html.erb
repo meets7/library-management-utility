@@ -28,6 +28,7 @@
     <table>
       <tr>
         <th>Loan Id</th>
+        <th>Book ISBN</th>
         <th>Fine Amount</th>
         <th>Select</th>
       </tr>
@@ -35,6 +36,7 @@
       <% @fines.each do |fine| %>
       <tr>
         <td><%= fine.loan_id %></td>
+        <td><%= fine.isbn %></td>
         <td><%= fine.fine_amt %></td>
         <td><%= link_to 'Mark as paid', fine_path(fine), method: :patch %></td>
       </tr>

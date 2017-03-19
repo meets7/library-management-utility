@@ -14,8 +14,12 @@ class BookLoansController < ApplicationController
 			return redirect_to book_path id: isbn
 		end
 
-		currentBorrowedBooks = Integer(BookLoan.where(:card_id => @card_id, :date_in =>  nil).count)
+		if Borrower.exists?(@card_id) == false
+			flash[:error] = "Borrower with given card id does not exist."
+			return
+		end
 
+		currentBorrowedBooks = Integer(BookLoan.where(:card_id => @card_id, :date_in =>  nil).count)
 		if currentBorrowedBooks >= 3
 			flash[:error] = "Book limit reach. Borrower already has 3 books checked out."
 			return

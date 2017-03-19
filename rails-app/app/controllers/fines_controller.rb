@@ -43,8 +43,8 @@ class FinesController < ApplicationController
 		@borrower = Borrower.find(params[:borrower_id])
 		card_id = @borrower.card_id
 		@fines = Fine.joins("INNER JOIN book_loans on book_loans.loan_id = fines.loan_id where fines.paid = false and book_loans.card_id = '#{card_id}'")
-						 .select("fines.*")
-		@card_id = card_id.rjust(6, padstr='0')
+						 .select("fines.*, book_loans.isbn as isbn")
+		@card_id = card_id.to_s.rjust(6, padstr='0')
 
 	end
 
@@ -57,7 +57,7 @@ class FinesController < ApplicationController
 			return redirect_to action: "index"	
 		end
 		current_fine.update(:paid => true)
-		@card_id = @card_id.rjust(6, padstr='0')
+		@card_id = @card_id.to_s.rjust(6, padstr='0')
 		redirect_to action: "index"
 
 	end
