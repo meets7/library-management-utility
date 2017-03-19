@@ -53,7 +53,7 @@ class FinesController < ApplicationController
 		current_fine = Fine.find(loan_id)
 		bookloan = BookLoan.find(loan_id)
 		if bookloan.date_in.nil?
-			flash[:error] = "Book not checked in."
+			flash[:fineError] = "Book not checked in."
 			return redirect_to action: "index"	
 		end
 		current_fine.update(:paid => true)

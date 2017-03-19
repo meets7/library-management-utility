@@ -27,7 +27,7 @@
     <div id="borrowerDetails">
       <span><h5>Borrower details</h5></span>
       <span>Borrow Name: <%= @borrowerInfo[0].borrowerName%></span>
-      <span>Borrow card id: <%= @card_id%></span>
+      <span>Borrower card id: <%= @card_id%></span>
     </div>
 
     <table>
@@ -41,7 +41,7 @@
 
       <% @borrowerInfo.each do |book_loan| %>
       <tr>
-        <td>sample</td>
+        <td><%= book_loan.booktitle %></td>
         <td><%= book_loan.isbn %></td>
         <td><%= book_loan.date_out %></td>
         <td><%= book_loan.due_date %></td>
@@ -51,8 +51,8 @@
   </div>
   <% end %>
 <div class="continue-button">
-  <%= link_to "Continue", welcome_search_path %>
-</div>>
+  <%= link_to "Back", welcome_search_path %>
+</div>
 
 </body>
 

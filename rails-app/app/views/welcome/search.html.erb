@@ -46,12 +46,18 @@
       <form action="<%= books_path %>" method="get">
         <input type="text" name="search-text" class="search blue" placeholder="Start typing..">
       </form>
+    <div class="continue-button">
+      <%= link_to "Back", welcome_search_path %>
+      </div>
     </div>
 
     <div class="searchBorrower">
       <form action="<%= book_loans_path %>" method="get">
         <input type="text" name="borrower-search-text" class="searchBorrower blue" placeholder="Enter Borrower id/name or Book isbn...">
       </form>
+          <div class="continue-button">
+      <%= link_to "Back", welcome_search_path %>
+      </div>
     </div>
 
   </div>

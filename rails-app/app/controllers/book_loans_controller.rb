@@ -42,8 +42,8 @@ class BookLoansController < ApplicationController
 	def index
 		@isEmpty = false
 		@borrower_search_text = params[:"borrower-search-text"]
-		@borrowerInfo = BookLoan.joins("INNER JOIN borrower ON borrower.card_id = book_loans.card_id where (book_loans.card_id = '#{@borrower_search_text}' or borrower.bname like '%#{@borrower_search_text}%' or isbn = '#{@borrower_search_text}') and book_loans.date_in is null")
-		.select("book_loans.*, borrower.bname as borrowerName, borrower.card_id as card_id")
+		@borrowerInfo = BookLoan.joins("INNER JOIN borrower ON borrower.card_id = book_loans.card_id INNER JOIN book on book.isbn = book_loans.isbn where (book_loans.card_id = '#{@borrower_search_text}' or borrower.bname like '%#{@borrower_search_text}%' or book_loans.isbn = '#{@borrower_search_text}') and book_loans.date_in is null")
+		.select("book_loans.*, borrower.bname as borrowerName, borrower.card_id as card_id, book.title as booktitle")
 		if @borrowerInfo.empty?
 			@isEmpty = true
 			return
