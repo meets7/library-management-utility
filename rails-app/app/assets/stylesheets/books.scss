@@ -390,7 +390,7 @@ paddin-top:100px;
 }
 
 .review-details{
-  margin-left:10px;
+  
 }
 
 #cover-image{
@@ -424,4 +424,17 @@ paddin-top:100px;
     text-transform: uppercase;
     cursor:pointer;
     width:20%;
+}
+
+
+#btn {
+  border: 1px solid #777777;
+  background: #6e9e2d;
+  color: white;
+  font-size: 15px;
+  padding: 20px;
+  cursor: pointer;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-left:35%;
 }

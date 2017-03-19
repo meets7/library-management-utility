@@ -33,9 +33,10 @@ class FinesController < ApplicationController
 				existingFine.update(fine_amt: fineAmount)
 			end 
 		end
-		# @fines = Fine.where(:paid => false)
+		
 		@fines = Fine.joins("INNER JOIN book_loans on fines.loan_id = book_loans.loan_id INNER JOIN borrower on borrower.card_id = book_loans.card_id where fines.paid = false group by borrower.card_id")
 					 .select("borrower.card_id as card_id, borrower.bname as bname, sum(fines.fine_amt) as amount")
+		
 	end
 
 	def edit
@@ -43,7 +44,7 @@ class FinesController < ApplicationController
 		card_id = @borrower.card_id
 		@fines = Fine.joins("INNER JOIN book_loans on book_loans.loan_id = fines.loan_id where fines.paid = false and book_loans.card_id = '#{card_id}'")
 						 .select("fines.*")
-
+		@card_id = card_id.rjust(6, padstr='0')
 
 	end
 
@@ -56,7 +57,8 @@ class FinesController < ApplicationController
 			return redirect_to action: "index"	
 		end
 		current_fine.update(:paid => true)
-
+		@card_id = @card_id.rjust(6, padstr='0')
 		redirect_to action: "index"
+
 	end
 end

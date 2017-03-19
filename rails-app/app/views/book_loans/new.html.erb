@@ -15,7 +15,7 @@
     <% if @borrowSuccessful == true %>
     Checkout complete for the following book
     <% else %>
-    Checkout failed. Borrower has already 3 books loaned out.
+    <span class="alert"><%= flash[:error] %></span>
     <% end %>
   </h3>
 
@@ -29,10 +29,12 @@
         <h3 class="tab__title">Failed<span class="fa fa-times"></span></h3>
         <% end %>
         <div class="tab__content">
-          <%= image_tag(@book.cover, alt: @book.title) -%>
+          <%= image_tag(@book.cover,{alt: @book.title, :class => "cover-image"}) -%>
           <span> <%= @book.title -%> </span>
           <span> ISBN: <%= @book.isbn -%> </span>
-          <span> Title: <%= @book.title -%> </span>
+          <% if @borrowSuccessful == true %>
+          <span> Borrower ID: <%= @card_id %> </span>
+          <%end%>
         </div>
       </div>
     </label>

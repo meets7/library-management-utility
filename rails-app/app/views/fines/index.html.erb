@@ -33,7 +33,7 @@
       <tr>
         <td><%= fine.bname %></td>
         <td><%= fine.card_id %></td>
-        <td><%= fine.amount %></td>
+        <td>$<%= fine.amount %></td>
         <td><%= link_to 'Mark as paid', edit_fine_path(id:"userFines",borrower_id: fine.card_id) %></td>
       </tr>
       <%end%>

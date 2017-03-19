@@ -37,12 +37,8 @@
         <div class="tab__content">
           <div class="input-group">
             <%= form_tag({:controller=>"book_loans", :action=>"new"}, method: :get) do %>
-            <%= text_field_tag :borrower_id, nil,{:placeholder => "Borrower card number", :id=>"borrower-id"} %>
-            <span type="button" id="OR-text" class="button--circle">Or</button>
-              <%= text_field_tag :borrower_phone, nil, {:placeholder => "Borrower phone number", :id => "borrower-phone"} %>
-              <!-- <input type="text" id="borrower-id" class="" placeholder="Borrower Card Number" /> -->
-              <!-- <input type="text" id="borrower-phone" class="" placeholder="Borrower Phone Number"> -->
-              <button type="button" class="button--action button--circle">GO</button>
+            <%= text_field_tag :borrower_id, nil,{:placeholder => "Borrower card number", :id=>"borrower-id", :autofocus=>true} %>
+            <span class="alert"><%= flash[:error] %></span>
             </div>
           </div>
         </div>
@@ -68,9 +64,9 @@
           <div class="tab__content">
             <p>Confirm book loan?</p>
             <%= hidden_field_tag(:isbn, @book.isbn) %>
-            <%= submit_tag 'Yes', {:class=>"transparent fa fa-times" } %>
+            <%= submit_tag 'Yes', {id: "btn"  } %>
             <% end %>
-            <button type="button" class="transparent"><span class="fa fa-times"></span>No</button>
+            
           </div>
         </label>
       </div>

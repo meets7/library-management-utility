@@ -6,5 +6,5 @@ class Borrower < ActiveRecord::Base
 
     validates :bname, presence: true
     validates :address, presence: true
-    validates :ssn, presence: true, uniqueness: true
+    validates :ssn, presence: true, uniqueness: true, format: { with: /[0-9][0-9][0-9][-][0-9][0-9]-[0-9][0-9][0-9][0-9]/, message: "ssn in wrong format" }
 end
